@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-books etc
+    <ol>
+        {% for book in books %}
+            <li>{{book.id}} {{book.title}} ({{book.release_year}}) - {{book.author}}</li>
+        {% endfor %}
+    </ol>
 {% endblock %}
